@@ -125,6 +125,8 @@ Database (SQL Server)
   "averagePerDay": 3016.13
 }
 
+```
+
 ### Example Summary Report Response:
 
 ```json
@@ -135,13 +137,13 @@ Database (SQL Server)
     {
       "id": 1,
       "name": "Food",
-      "userId": "8b2cc2c9-3188-4156-8aed-43f8a6520a86",
+      "userId": "##################################",
       "totalAmount": 67500
     },
     {
       "id": 2,
       "name": "Transport",
-      "userId": "8b2cc2c9-3188-4156-8aed-43f8a6520a86",
+      "userId": "##################################",
       "totalAmount": 34000
     }
   ],
@@ -149,8 +151,8 @@ Database (SQL Server)
     "id": 11,
     "ammount": 25000,
     "description": "Taxi to the Althawra Street",
-    "username": "medo",
-    "userId": "8b2cc2c9-3188-4156-8aed-43f8a6520a86",
+    "username": "###",
+    "userId": "##################################",
     "categoryName": "Transport",
     "categoryId": 2,
     "date": "2025-10-30T20:56:14.6534799"
@@ -158,14 +160,75 @@ Database (SQL Server)
   "firstExpenseDate": "30 Oct 2025",
   "mostRecentExpenseDate": "05 Nov 2025"
 }
+```
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-C# .NET Core Web API
+- **C# .NET Core Web API**
+- **Entity Framework Core + SQL Server**
+- **JWT Authentication**
+- **AutoMapper**
 
-Entity Framework Core (SQL Server)
+## 🚀 Running the Project
 
-JWT Authentication
+1. Configure database connection (user secrets recommended)
+2. Apply migrations:
+   ```bash
+   dotnet ef database update
+   ```
+## Run API
 
-AutoMapper
+1. Normal Mode
+    ```bash
+    dotnet run
+    ```
+2. Watch Mode
+    ```bash
+    dotnet watch run
+    ```
+
+## Swagger UI
+
+```bash
+http://localhost:xxx/swagger/index.html
+```
+
+## ⚠️ Important Notes (Development Setup)
+
+### 1) Required Tools
+Make sure you have the following installed before running the project:
+
+| Tool | Version | Download |
+|------|---------|----------|
+| .NET SDK | 6.0+ or 7.0+ | https://dotnet.microsoft.com/download |
+| SQL Server / LocalDB | Any modern version | https://www.microsoft.com/en-us/sql-server |
+| Visual Studio / VS Code | Latest | https://visualstudio.microsoft.com/ |
+| Postman or Swagger UI | For API testing | https://www.postman.com/ |
+
+---
+
+### 2) Configure Database Connection
+
+This project uses **User Secrets** to keep sensitive data out of source control.
+
+Run this command in the project directory:
+
+```bash
+dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Your-SQL-Connection-Here"
+```
+
+## 👨‍💻 Author
+
+Moayyad AlFahed
+
+Backend Developer (.NET / SQL / APIs)
+
+GitHub: https://github.com/Medo-Fahed-777
+
+LinkedIn: https://www.linkedin.com/in/moayyad-al-fahed-04baa5389
+    
+    
+
+
+
 
