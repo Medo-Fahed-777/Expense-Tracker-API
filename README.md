@@ -73,11 +73,11 @@ Database (SQL Server)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET    | `/api/expenses` | Get all expenses (supports filtering & sorting) |
-| GET    | `/api/expenses/{id}` | Get a specific expense |
-| POST   | `/api/expenses` | Create a new expense |
-| PUT    | `/api/expenses/{id}` | Update amount, description, or category |
-| DELETE | `/api/expenses/{id}` | Delete an expense |
+| GET    | `/api/Expense` | Get all expenses (supports filtering & sorting) |
+| GET    | `/api/Expense/{id}` | Get a specific expense |
+| POST   | `/api/Expense` | Create a new expense |
+| PUT    | `/api/Expense/{id}` | Update amount, description, or category |
+| DELETE | `/api/Expense/{id}` | Delete an expense |
 
 ### Example Query Parameters for Filtering:
 
@@ -101,8 +101,8 @@ Database (SQL Server)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET    | `/api/reports/MonthlyReport` | Monthly spending report  |
-| GET    | `/api/reports/SummaryReport` | Lifetime spending summary |
+| GET    | `/api/Report/MonthlyReport` | Monthly spending report  |
+| GET    | `/api/Report/SummaryReport` | Lifetime spending summary |
 
 ### Example Query Parameters for Monthly Report:
 /api/Report/MonthlyReport?month=11&year=2025
